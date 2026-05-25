@@ -1,0 +1,215 @@
+.background{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+inset:0;
+}
+
+/* Fond principal */
+
+.gradient{
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+180deg,
+#05050B 0%,
+#0E1020 50%,
+#1B1735 100%
+);
+
+}
+
+/* Halo lumineux */
+
+.gradient::after{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+left:50%;
+top:35%;
+
+transform:
+translate(-50%,-50%);
+
+border-radius:50%;
+
+background:
+radial-gradient(
+
+circle,
+
+rgba(255,77,141,.18),
+
+rgba(157,124,255,.10),
+
+transparent 70%
+
+);
+
+filter:blur(100px);
+
+animation:
+pulse 8s infinite alternate;
+
+}
+
+
+/* Étoiles couche 1 */
+
+.stars{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(
+white 1px,
+transparent 1px
+);
+
+background-size:
+140px 140px;
+
+opacity:.5;
+
+}
+
+
+/* Étoiles couche 2 */
+
+.stars::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(
+white .8px,
+transparent .8px
+);
+
+background-size:
+90px 90px;
+
+opacity:.35;
+
+animation:
+moveStars 30s linear infinite;
+
+}
+
+
+/* Étoiles couche 3 */
+
+.stars::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(
+white .5px,
+transparent .5px
+);
+
+background-size:
+55px 55px;
+
+opacity:.15;
+
+animation:
+moveStars 45s linear infinite reverse;
+
+}
+
+
+/* Sol lumineux temporaire */
+
+.background .ground{
+
+position:absolute;
+
+bottom:-150px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:1200px;
+height:300px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+ellipse,
+
+rgba(255,77,141,.15),
+
+transparent 70%
+
+);
+
+filter:blur(80px);
+
+}
+
+
+@keyframes pulse{
+
+0%{
+
+transform:
+translate(-50%,-50%)
+scale(1);
+
+}
+
+100%{
+
+transform:
+translate(-50%,-50%)
+scale(1.15);
+
+}
+
+}
+
+@keyframes moveStars{
+
+from{
+
+transform:
+translateY(0px);
+
+}
+
+to{
+
+transform:
+translateY(60px);
+
+}
+
+}

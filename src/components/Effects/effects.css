@@ -1,0 +1,230 @@
+.heart{
+
+position:absolute;
+
+font-size:28px;
+
+opacity:.6;
+
+z-index:2;
+
+animation:
+floatHeart 8s infinite linear;
+
+}
+
+.h1{
+
+left:20%;
+bottom:-50px;
+
+}
+
+.h2{
+
+left:50%;
+bottom:-50px;
+
+animation-delay:2s;
+
+}
+
+.h3{
+
+left:80%;
+bottom:-50px;
+
+animation-delay:4s;
+
+}
+
+
+/* Pétales */
+
+.petal{
+
+position:absolute;
+
+font-size:24px;
+
+top:-50px;
+
+opacity:.5;
+
+animation:
+fallPetal 10s linear infinite;
+
+}
+
+.p1{
+
+left:10%;
+
+}
+
+.p2{
+
+left:35%;
+
+animation-delay:2s;
+
+}
+
+.p3{
+
+left:60%;
+
+animation-delay:5s;
+
+}
+
+.p4{
+
+left:85%;
+
+animation-delay:7s;
+
+}
+
+
+@keyframes floatHeart{
+
+from{
+
+transform:
+translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.6;
+
+}
+
+to{
+
+transform:
+translateY(-800px);
+
+opacity:0;
+
+}
+
+}
+
+
+@keyframes fallPetal{
+
+from{
+
+transform:
+translateY(-50px)
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+translateY(100vh)
+rotate(360deg);
+
+}
+
+}
+
+/* Click reaction animation */
+.click{
+	width:18px;
+	height:18px;
+	opacity:1;
+	z-index:6;
+	display:block;
+	pointer-events:none;
+}
+
+@keyframes clickUp{
+	0%{
+		transform:translate(-50%,-50%) translateY(0) scale(1);
+		opacity:1;
+	}
+	100%{
+		transform:translate(-50%,-50%) translateY(-60px) scale(0.6);
+		opacity:0;
+	}
+}
+
+
+.clickReaction{
+
+position:absolute;
+
+left:50%;
+top:45%;
+
+font-size:35px;
+
+z-index:50;
+
+pointer-events:none;
+
+animation:
+reactionAnimation 2.2s forwards;
+
+}
+
+
+@keyframes reactionAnimation{
+
+
+0%{
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(15px)
+scale(.7);
+
+}
+
+
+20%{
+
+opacity:1;
+
+transform:
+translateX(-50%)
+translateY(0px)
+scale(1);
+
+}
+
+
+50%{
+
+opacity:1;
+
+transform:
+translateX(-50%)
+translateY(-20px)
+scale(1.1);
+
+}
+
+
+100%{
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(-80px)
+scale(.9);
+
+}
+
+}
