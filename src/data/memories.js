@@ -4,13 +4,13 @@ export const memories=[
 
 id:1,
 
-title:"Notre premier souvenir ❤️",
+title:"Notre premier moment ❤️",
 
 description:
 
-"Un moment simple devenu spécial.",
+"Le jour où une histoire a commencé.",
 
-image:"/memories/memory1.jpg",
+image:"/memories/firstMoment.jpg",
 
 reaction:"love"
 
@@ -24,9 +24,9 @@ title:"Notre fou rire 😭",
 
 description:
 
-"Impossible d'arrêter de rire.",
+"Impossible de s'arrêter ce jour-là.",
 
-image:"/memories/memory2.jpg",
+image:"/memories/funnyMoment.jpg",
 
 reaction:"happy"
 
@@ -40,9 +40,9 @@ title:"Petit moment précieux ✨",
 
 description:
 
-"Ces petits instants qui comptent.",
+"Ces petits instants qui deviennent énormes.",
 
-image:"/memories/memory3.jpg",
+image:"/memories/specialMoment.jpg",
 
 reaction:"shy"
 
@@ -58,7 +58,7 @@ description:
 
 "Notre histoire continue.",
 
-image:"/memories/memory4.jpg",
+image:"/memories/today.jpg",
 
 reaction:"love"
 

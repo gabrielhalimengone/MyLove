@@ -24,6 +24,11 @@ import MusicPlayer from "../components/Audio/MusicPlayer";
 import SfxPlayer from "../components/Audio/SfxPlayer";
 
 import Timeline from "../components/Timeline/Timeline";
+import FinalLetter from "../components/FinalLetter/FinalLetter";
+import EndingScene from "../components/Ending/EndingScene";
+import LoveCounter from "../components/LoveCounter/LoveCounter";
+
+import AmbientParticles from "../components/Effects/AmbientParticles";
 
 import "../components/Avatar/avatar.css";
 
@@ -52,9 +57,23 @@ setExpectedSpeaker]=useState("Lui");
 const [currentConversation,
 setCurrentConversation]=useState(null);
 
+const [
+
+showFinalLetter,
+
+setShowFinalLetter
+
+]=useState(false);
+
 const sfx=SfxPlayer();
 
+const [
 
+showEnding,
+
+setShowEnding
+
+]=useState(false);
 
 function triggerReaction(){
 
@@ -155,7 +174,7 @@ if(expectedSpeaker!=="Lui"){
 setDialogue({
 
 speaker:"Lui",
-text:"Clique sur elle maintenant ❤️"
+text:"C'est à ma chérie de parler ❤️"
 
 });
 
@@ -293,6 +312,10 @@ duration:1
 
 <TopBar/>
 
+<AmbientParticles/>
+
+<LoveCounter/>
+
 <FloatingHearts/>
 
 <Petals/>
@@ -366,6 +389,87 @@ setSelectedMemory(null)
 
 />
 
+
+{/* Déclencheur temporaire lettre finale */}
+
+<motion.div
+
+onClick={()=>{
+
+setShowFinalLetter(true)
+
+}}
+
+style={{
+
+position:"absolute",
+
+right:"5%",
+
+bottom:"10%",
+
+fontSize:"45px",
+
+cursor:"pointer",
+
+zIndex:50
+
+}}
+
+whileHover={{
+
+scale:1.2
+
+}}
+
+whileTap={{
+
+scale:.9
+
+}}
+
+>
+
+💌
+
+</motion.div>
+
+
+<motion.div
+
+onClick={()=>{
+
+setShowEnding(true)
+
+}}
+
+style={{
+
+position:"absolute",
+
+right:"5%",
+
+bottom:"22%",
+
+fontSize:"40px",
+
+cursor:"pointer",
+
+zIndex:50
+
+}}
+
+whileHover={{
+
+scale:1.2
+
+}}
+
+>
+
+🌸
+
+</motion.div>
 
 <motion.div
 
@@ -519,6 +623,32 @@ text={dialogue.text}
 
 
 <Timeline/>
+
+<FinalLetter
+
+show={showFinalLetter}
+
+close={()=>{
+
+setShowFinalLetter(false)
+
+}}
+
+/>
+
+
+<EndingScene
+
+show={showEnding}
+
+close={()=>{
+
+setShowEnding(false)
+
+}}
+
+/>
+
 </>
 
 )

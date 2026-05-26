@@ -22,3 +22,52 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+
+.ambientParticle{
+
+position:absolute;
+
+top:110%;
+
+font-size:18px;
+
+pointer-events:none;
+
+opacity:.55;
+
+z-index:2;
+
+animation:
+
+floatUp linear infinite;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:
+translateY(0);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.55;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh);
+
+opacity:0;
+
+}
+
+}

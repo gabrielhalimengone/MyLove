@@ -1,22 +1,61 @@
-.avatar{
+/* =========================
+   AVATAR FRAME
+========================= */
+
+.avatarFrame{
 
 position:absolute;
 
-bottom:155px;
+bottom:230px;
 
 width:260px;
 
 height:auto;
 
-object-fit:contain;
+z-index:20;
 
 cursor:pointer;
 
-transition:.4s;
+animation:
 
-z-index:10;
+avatarFloat 3s ease-in-out infinite;
+
+}
+
+
+/* Position des personnages */
+
+.boyFrame{
+
+left:30%;
+
+}
+
+.girlFrame{
+
+right:30%;
+
+}
+
+
+/* =========================
+   IMAGE AVATAR
+========================= */
+
+.avatar{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+object-fit:contain;
+
+transition:.5s;
 
 filter:
+
 drop-shadow(
 0 0 30px rgba(
 255,
@@ -28,22 +67,16 @@ drop-shadow(
 }
 
 
-.boy{
+/* Hover */
 
-left:30%;
+.avatarFrame:hover .avatar{
 
-}
+transform:
 
-.girl{
-
-right:30%;
-
-}
-
-
-.avatar:hover{
+scale(1.04);
 
 filter:
+
 drop-shadow(
 0 0 50px rgba(
 255,
@@ -53,71 +86,106 @@ drop-shadow(
 ));
 
 }
-.sceneGround{
+
+
+/* =========================
+   ANIMATION RESPIRATION
+========================= */
+
+@keyframes avatarFloat{
+
+0%{
+
+transform:
+translateY(0px);
+
+}
+
+50%{
+
+transform:
+translateY(-8px);
+
+}
+
+100%{
+
+transform:
+translateY(0px);
+
+}
+
+}
+
+
+/* =========================
+   OMBRES SOUS PERSONNAGES
+========================= */
+
+.boyFrame::after,
+.girlFrame::after{
+
+content:"";
 
 position:absolute;
 
-bottom:110px;
+bottom:-25px;
 
 left:50%;
 
-transform:translateX(-50%);
+transform:
 
-width:850px;
-height:220px;
+translateX(-50%);
+
+width:120px;
+height:25px;
 
 border-radius:50%;
 
 background:
 
-radial-gradient(
-
-ellipse,
-
-rgba(255,77,141,.12),
-
-rgba(157,124,255,.08),
-
-transparent 70%
-
+rgba(
+0,
+0,
+0,
+0.25
 );
 
-filter:blur(10px);
+filter:
 
-z-index:1;
+blur(10px);
+
+z-index:-1;
 
 }
 
 
-/* Banc */
+/* =========================
+   AURA PERSONNAGE ACTIF
+========================= */
 
-.bench{
+.speakerAura{
 
 position:absolute;
 
-bottom:15px;
+inset:0;
 
-left:50%;
+z-index:0;
 
-transform:translateX(-50%);
+pointer-events:none;
 
-font-size:90px;
+opacity:.9;
 
-opacity:.18;
+filter:
 
-filter:blur(.5px);
-
-}
-
-
-/* Avatars devant banc */
-
-.avatar{
-
-z-index:20;
+blur(60px);
 
 }
-/* Sol de scène */
+
+
+/* =========================
+   SOL ROMANCE
+========================= */
 
 .sceneGround{
 
@@ -127,7 +195,9 @@ bottom:125px;
 
 left:50%;
 
-transform:translateX(-50%);
+transform:
+
+translateX(-50%);
 
 width:900px;
 height:220px;
@@ -155,56 +225,9 @@ z-index:1;
 }
 
 
-/* Ombres sous personnages */
-
-.boy::after,
-.girl::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-25px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:120px;
-height:25px;
-
-border-radius:50%;
-
-background:
-
-rgba(
-0,
-0,
-0,
-0.25
-);
-
-filter:blur(10px);
-
-z-index:-1;
-
-}
-
-.speakerAura{
-
-position:absolute;
-
-inset:0;
-
-z-index:0;
-
-pointer-events:none;
-
-filter:blur(60px);
-
-opacity:.9;
-
-}
+/* =========================
+   FOND ROMANCE
+========================= */
 
 .romanceBackground{
 
@@ -214,7 +237,9 @@ bottom:0;
 
 left:50%;
 
-transform:translateX(-50%);
+transform:
+
+translateX(-50%);
 
 width:100%;
 height:60%;
@@ -243,46 +268,27 @@ transparent
 
 }
 
-.avatarFrame{
+
+/* =========================
+   BANC DECORATIF
+========================= */
+
+.bench{
 
 position:absolute;
 
-bottom:155px;
+bottom:15px;
 
-width:260px;
+left:50%;
 
-height:auto;
+transform:
 
-z-index:20;
+translateX(-50%);
 
-cursor:pointer;
+font-size:90px;
 
-}
+opacity:.18;
 
-.boyFrame{
-
-left:30%;
-
-}
-
-.girlFrame{
-
-right:30%;
-
-}
-
-.avatarFrame .avatar{
-
-position:relative;
-
-bottom:auto;
-
-left:auto;
-
-right:auto;
-
-width:100%;
-
-display:block;
+filter:blur(.5px);
 
 }

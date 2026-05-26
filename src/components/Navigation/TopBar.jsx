@@ -9,7 +9,7 @@ return(
 
 <div className="logo">
 
-Our Story ❤️
+Notre belle histoire ❤️
 
 </div>
 

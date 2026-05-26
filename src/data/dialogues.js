@@ -4,33 +4,31 @@ boy:[
 
 {
 
-text:"Je crois que mon endroit préféré… c'est à côté de toi ❤️",
-
-reply:"Alors reste ici 😳❤️"
+text:"Je me rappelle encore du moment où tout a commencé ❤️"
 
 },
 
 {
 
-text:"Je pourrais rester là avec toi pendant des heures.",
-
-reply:"Ça tombe bien... moi aussi ❤️"
+text:"Avec toi les journées passent trop vite ✨"
 
 },
 
 {
 
-text:"Ton sourire devrait être considéré comme une arme 😭",
-
-reply:"Arrête je vais rougir 😳"
+text:"Je pourrais rester ici avec toi pendant longtemps ❤️"
 
 },
 
 {
 
-text:"Encore toi ? ...ça me va ❤️",
+text:"Chaque moment avec toi devient un souvenir 😭"
 
-reply:"Heureusement 😏"
+},
+
+{
+
+text:"Je crois que tu rends ma vie plus belle ❤️"
 
 }
 
@@ -41,33 +39,31 @@ girl:[
 
 {
 
-text:"Tu es enfin là ❤️",
-
-reply:"Je viens toujours te retrouver."
+text:"Tu sais... j'aime vraiment être avec toi 💗"
 
 },
 
 {
 
-text:"Je pensais justement à toi...",
-
-reply:"Je crois qu'on s'est synchronisés 😭❤️"
+text:"Nos petits moments sont mes préférés ✨"
 
 },
 
 {
 
-text:"Tu sais que tu comptes beaucoup pour moi ?",
-
-reply:"Et toi encore plus."
+text:"Je pourrais écouter ta voix pendant des heures ❤️"
 
 },
 
 {
 
-text:"J'aime bien quand tu es là.",
+text:"Je me rappelle encore de notre fou rire 😭"
 
-reply:"J'aime être là avec toi."
+},
+
+{
+
+text:"Je suis heureuse qu'on écrive cette histoire ensemble 💗"
 
 }
 
